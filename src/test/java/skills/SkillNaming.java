@@ -8,6 +8,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(ConcordionRunner.class)
 @Extensions(MarkdownExtension.class)
+
+//implements Spec01
 public class SkillNaming {
     public String normalise(String skill) {
         return WordUtils.capitalize(skill);
