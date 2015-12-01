@@ -1,0 +1,11 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile "org.concordion:concordion:1.5.1",
+                "org.concordion:concordion-markdown-extension:0.1.0",
+                "org.apache.commons:commons-lang3:3.4"
+}
