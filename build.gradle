@@ -9,3 +9,16 @@ dependencies {
                 "org.concordion:concordion-markdown-extension:0.1.0",
                 "org.apache.commons:commons-lang3:3.4"
 }
+
+test {
+    testLogging {
+        // Make sure output from standard out or error is shown in Gradle output.
+        showStandardStreams = true
+    }
+
+    // write output to build/reports/spec    
+    systemProperties['concordion.output.dir'] = "$reporting.baseDir/spec"
+
+    // force it to run even if test code hasn't changed
+    outputs.upToDateWhen { false }
+}
